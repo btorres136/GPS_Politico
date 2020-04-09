@@ -3,9 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignIn";
-import PrivateRoute from "./components/auth/PrivateRoute";
-import UserProviders from "./components/providers/UserProvider";
 import main from "./components/main/main";
+import PrivateRoute from "./config/PrivateRoute";
+import UserProviders from "./components/providers/UserProvider";
+import "./App.scss";
 function App() {
   return (
     <UserProviders>

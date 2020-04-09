@@ -1,8 +1,12 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import "./SignIn.scss";
 
 const SignIn = () => {
-  return <div>hola</div>;
+  return(
+    <div className="nav nav-bar">
+      data
+    </div>
+  );
 };
 
 export default SignIn;
