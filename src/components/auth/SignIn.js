@@ -1,11 +1,10 @@
 import React from "react";
 import "./SignIn.scss";
+import Navbar from "../layout/Navbar";
 
 const SignIn = () => {
   return(
-    <div className="nav nav-bar">
-      data
-    </div>
+    <Navbar />
   );
 };
 

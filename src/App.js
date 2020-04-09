@@ -1,4 +1,6 @@
 import React from "react";
+import "react-bootstrap";
+import "bootstrap";
 import { BrowserRouter, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard";
 import SignIn from "./components/auth/SignIn";
