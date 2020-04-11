@@ -1,3 +1,6 @@
-.color-primary{
-    background-color: red;
+.navbar {
+    font-size: 1.6rem;
+    & .navbar-brand{
+        font-size: 1.6rem;
+    }
 }

@@ -1,11 +1,20 @@
 import React from "react";
-import { auth } from "../../utils/firebase-functions";
+import Navbar from "../layout/Navbar";
+import Cities from "./Cities";
+import { Candidates } from "./Candidates";
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import "./Dashboard.scss";
+import MapContainer from "./MapContainer";
 
 const Dashboard = () => {
   return (
-    <div>hello
-      <button onClick={() => auth.signOut()}>SignOut</button>
-    </div>
+    <>
+      <Navbar />
+      <div className="Dashboard">
+        <MapContainer />
+        <Candidates />
+      </div>
+    </>
   );
 };
 

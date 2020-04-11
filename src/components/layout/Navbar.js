@@ -4,7 +4,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark color-primary fixed-top" nav>
+    <nav className="navbar navbar-expand-lg shadow-lg p-3 navbar-light bg-white fixed-top">
       <Link to="/" className="navbar-brand">
         GPS Politico
       </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link" href="#">
-              Link
+              SignOut
             </Link>
           </li>
           <li className="nav-item dropdown">
@@ -42,7 +42,7 @@ const Navbar = () => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Dropdown
+              User
             </Link>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link to="/" className="dropdown-item" href="#">
