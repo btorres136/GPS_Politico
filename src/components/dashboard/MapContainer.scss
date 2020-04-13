@@ -1,0 +1,41 @@
+.MapContainer{
+    display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+}
+.Map{
+    flex: 3;
+    height: 93.35vh;
+    min-height: 93.35vh;
+    @media only screen and (max-width: 1200px) {
+        height: 60vh;
+        min-height: 60vh;
+    }
+}
+
+.info {
+    flex:.8;
+    background-color: #fff ;
+    padding: 3rem;
+}
+
+.loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-around;
+    align-items: center;
+    font: .65% "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    background: #000;
+}
+
+loading-h1 {
+    text-align: center;
+    margin: 0;
+    font-weight: 250;
+    font-size: 6rem;
+}
