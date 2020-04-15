@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" component={main} />
         <Route exact path="/Login" component={SignIn} />
         <Route exact path="/SignUp" component={SignUp} />
-        <PrivateRoute exact path="/Dashboard" component={Dashboard} />
+        <PrivateRoute exact path="/Dashboard/Home" component={Dashboard} />
       </BrowserRouter>
     </UserProvider>
   );

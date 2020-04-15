@@ -1,24 +1,33 @@
 .MapContainer{
     display: flex;
     flex-direction: row;
-    @media only screen and (max-width: 1200px) {
+    overflow: hidden;
+    @media only screen and (max-width: 1400px) {
         flex-direction: column;
     }
 }
 .Map{
     flex: 3;
-    height: 93.35vh;
-    min-height: 93.35vh;
-    @media only screen and (max-width: 1200px) {
+    height: 93vh;
+    min-height: 93vh;
+    @media only screen and (max-width: 1400px) {
         height: 60vh;
         min-height: 60vh;
     }
 }
-
+$color-primary: #0b3954d8;
+$color-secondary: #093147;
+$color-tertiary: #edae49;
+$color-fourth: #d1495b;
+$color-five: #00798c;
 .info {
+    height: 93vh;
+    min-height: 93vh;
+    overflow-y: scroll;
     flex:.8;
-    background-color: #fff ;
+    background-color: rgba(226, 226, 226, 0.5);
     padding: 3rem;
+    overflow-y: auto;
 }
 
 .loading {

@@ -14,6 +14,7 @@ const Cities = () => {
       const newval = [];
       for (let value in data) {
         newval.push({
+          Partido: data[value].Partido,
           municipio: data[value].municipio,
           x_lat: data[value].x_long,
           y_lat: data[value].y_lat,
@@ -28,7 +29,9 @@ const Cities = () => {
       {retrived ? (
         <MapContainer cities={cities} />
       ) : (
-        <FontAwesomeIcon icon={faSpinner} size="3x" className="spinner" />
+        <div className="SpinnerContainer">
+          <FontAwesomeIcon icon={faSpinner} size="3x" className="spinner" />
+        </div>
       )}
     </>
   );

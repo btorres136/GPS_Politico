@@ -11,7 +11,7 @@ const SignIn = ({ history }) => {
       const { email, password } = event.target.elements;
       try {
         await auth.signInWithEmailAndPassword(email.value, password.value);
-        history.push("/Dashboard");
+        history.push("/Dashboard/Home");
       } catch (error) {
         alert(error);
       }
@@ -20,7 +20,7 @@ const SignIn = ({ history }) => {
   );
   const { user } = useContext(UserContext);
   if (user) {
-    return <Redirect to={"/Dashboard"} />;
+    return <Redirect to={"/Dashboard/Home"} />;
   }
   return (
     <div className="login-page">

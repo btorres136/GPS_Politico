@@ -1,5 +1,14 @@
-.spinner {
-    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+.SpinnerContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spinner{
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
 @keyframes spinner {

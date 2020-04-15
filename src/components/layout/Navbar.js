@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.scss";
+import { auth } from "../../utils/firebase-functions";
 
 const Navbar = () => {
   return (
@@ -31,15 +32,12 @@ const Navbar = () => {
           </Link>
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
             <Link to="/" className="dropdown-item" href="#">
-              Action
-            </Link>
-            <Link to="/" className="dropdown-item" href="#">
-              Another action
+              Profile
             </Link>
             <div className="dropdown-divider"></div>
-            <Link to="/" className="dropdown-item" href="#">
-              Something else here
-            </Link>
+            <button className="dropdown-item" onClick={() => auth.signOut()}>
+              SignOut
+            </button>
           </div>
         </li>
       </ul>
