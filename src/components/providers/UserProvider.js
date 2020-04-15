@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { auth } from "../../utils/firebase-functions";
-import "./UserProvider.scss";
+import { auth } from "../utils/firebase-functions";
 
 export const UserContext = createContext();
 

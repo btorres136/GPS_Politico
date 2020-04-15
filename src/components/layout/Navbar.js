@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.scss";
-import { auth } from "../../utils/firebase-functions";
+import { auth } from "../utils/firebase-functions";
 
 const Navbar = () => {
   return (

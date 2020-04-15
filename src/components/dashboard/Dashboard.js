@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../layout/Navbar";
 import Cities from "./Cities";
-import "./Dashboard.scss";
 import Sidebar from "../layout/Sidebar";
 
 const Dashboard = () => {

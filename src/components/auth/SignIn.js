@@ -1,6 +1,5 @@
 import React, { useCallback, useContext } from "react";
-import "./SignIn.scss";
-import { auth } from "../../utils/firebase-functions";
+import { auth } from "../utils/firebase-functions";
 import { UserContext } from "../providers/UserProvider";
 import { Redirect, withRouter } from "react-router-dom";
 

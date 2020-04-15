@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import "./MapContainer.scss";
-import "./Spinner.scss";
 import CityInfo from "./CityInfo";
-const styles = require("./MapStyle.json");
+const styles = require("../../resources/JSON/MapStyle.json");
 
 const mapStyles = {
   position: "relative",
@@ -25,19 +23,7 @@ const MapContainer = (props) => {
   };
   useEffect(() => {
     let mark = [];
-    let color = "";
     props.cities.map((data, idx) => {
-      switch (data.Partido) {
-        case "PNP":
-          color = "#0b3954";
-          break;
-        case "PPD":
-          color = "#d1495b";
-          break;
-        default:
-          color = "#ccc";
-          break;
-      }
       mark.push(
         <Marker
           key={idx}
@@ -45,12 +31,12 @@ const MapContainer = (props) => {
           position={{ lat: data.y_lat, lng: data.x_lat }}
           name={data.municipio}
           data={{ lat: data.y_lat, lng: data.x_lat }}
-          draggable={true}
+          //draggable={true}
           icon={{
             path:
               "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
             scale: 0.7,
-            fillColor: String(color),
+            fillColor: "#edae49",
             fillOpacity: 0.9,
             strokeWeight: 0.3,
             rotation: 0,

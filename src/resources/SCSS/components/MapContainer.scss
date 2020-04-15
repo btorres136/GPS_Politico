@@ -1,0 +1,27 @@
+.MapContainer{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    @media only screen and (max-width: 1400px) {
+        flex-direction: column;
+    }
+}
+
+.Map{
+    flex: 3;
+    height: 93vh;
+    min-height: 93vh;
+    @media only screen and (max-width: 1400px) {
+        height: 60vh;
+        min-height: 60vh;
+    }
+}
+.info {
+    height: 93vh;
+    min-height: 93vh;
+    overflow-y: scroll;
+    flex:.8;
+    background-color: $color-grey-light-1;
+    padding: 3rem;
+    overflow-y: auto;
+}

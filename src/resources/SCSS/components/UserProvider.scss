@@ -2,16 +2,13 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0;
     justify-content: space-around;
     align-items: center;
-    font: .65% "Segoe UI", Arial, sans-serif;
-    color: #fff;
-    background: #000;
+    color: $color-white;
+    background: $color-black;
 }
 h1 {
     text-align: center;
-    margin: 0;
     font-weight: 250;
     font-size: 6rem;
 }

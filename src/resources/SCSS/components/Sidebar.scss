@@ -1,4 +1,3 @@
-$color-secondary: #093147;
 .Sidebar {
   color: #ccc;
   position: fixed;
@@ -13,13 +12,11 @@ $color-secondary: #093147;
   @media only screen and (max-width: 992px) {
     margin-left: -28rem;
   }
-
   &--inner {
     padding: 2rem;
   }
 
   &__heading {
     font-size: 2rem;
-    font-weight: 400;
   }
 }

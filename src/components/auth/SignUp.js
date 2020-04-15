@@ -1,8 +1,7 @@
 import React, { useCallback, useContext } from "react";
 import { Redirect, withRouter } from 'react-router-dom';
-import { auth } from "../../utils/firebase-functions";
+import { auth } from "../utils/firebase-functions";
 import { UserContext } from "../providers/UserProvider";
-import "./SignIn.scss";
 
 const SignUp = ({history}) => {
   const handleSignUp = useCallback(

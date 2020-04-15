@@ -1,17 +1,12 @@
-$color-primary: #0b3954;
-$color-secondary: #093147;
-$color-tertiary: #edae49;
-$color-fourth: #d1495b;
-$color-five: #00798c;
 
 .color-primary {
   background-color: $color-primary;
 }
 
 .navbar {
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   & .navbar-brand {
-    font-size: 1.6rem;
+    font-size: $default-font-size;
   }
   & .dropdown-toggle::after {
     vertical-align: 0.5em;
@@ -42,7 +37,7 @@ $color-five: #00798c;
     display: block;
     color: #fff;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: $default-font-size;
   }
 }
 .size-3 {

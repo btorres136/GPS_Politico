@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../../utils/firebase-functions";
+import { db } from "../utils/firebase-functions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import "./Spinner.scss";
 import MapContainer from "./MapContainer";
 const Cities = () => {
   const [cities, setcities] = useState([]);
@@ -14,7 +13,6 @@ const Cities = () => {
       const newval = [];
       for (let value in data) {
         newval.push({
-          Partido: data[value].Partido,
           municipio: data[value].municipio,
           x_lat: data[value].x_long,
           y_lat: data[value].y_lat,

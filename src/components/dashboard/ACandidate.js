@@ -1,5 +1,4 @@
 import React from "react";
-import "./Dashboard.scss";
 
 const ACandidate = ({ candidates }) => {
   return (

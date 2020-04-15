@@ -1,0 +1,13 @@
+.SpinnerContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spinner{
+  animation: Spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+

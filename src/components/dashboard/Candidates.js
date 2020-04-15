@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../../utils/firebase-functions";
-import ACandidate from "./ACandidate";
+import { db } from "../utils/firebase-functions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import "./Spinner.scss";
+import ACandidate from "./ACandidate";
+
 export const Candidates = () => {
   const [candidates, setcandidates] = useState([]);
   const [retrived, setretrieved] = useState(false);
