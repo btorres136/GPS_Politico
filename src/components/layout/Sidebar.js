@@ -2,14 +2,16 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="Sidebar">
-      <div className="Sidebar--inner">
-          <h2 className="Sidebar__heading">Dashboard</h2>
-          <ul>
-              <li>Home</li>
-          </ul>
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
       </div>
-    </div>
+
+      <ul class="list-unstyled">
+        <p>Dummy Heading</p>
+        <li></li>
+      </ul>
+    </nav>
   );
 };
 

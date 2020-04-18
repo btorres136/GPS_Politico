@@ -1,0 +1,14 @@
+.MapContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: calc(100vh - 40.2px);
+    transition: all .3s;
+}
+//283
+//680.5
+.Map{
+    min-height: calc(100vh - 293px);
+    transition: all .3s;
+}

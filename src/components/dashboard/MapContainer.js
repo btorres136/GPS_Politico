@@ -49,12 +49,15 @@ const MapContainer = (props) => {
   }, [props.cities]);
   return (
     <div className="MapContainer">
+      <div className="pb-4 text-white">
+        <CityInfo municipio={state} />
+      </div>
       <div className="Map">
         <Map
           containerStyle={mapStyles}
           google={props.google}
-          zoom={11}
-          minZoom={11}
+          zoom={10}
+          minZoom={10}
           initialCenter={{
             lat: 18.2208328,
             lng: -66.4,
@@ -65,9 +68,6 @@ const MapContainer = (props) => {
         >
           {markers}
         </Map>
-      </div>
-      <div className="info">
-        <CityInfo municipio={state} />
       </div>
     </div>
   );

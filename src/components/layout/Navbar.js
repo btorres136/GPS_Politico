@@ -1,34 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkedAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { auth } from "../utils/firebase-functions";
 
 const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg shadow-lg navbar-dark color-primary fixed-top">
-      <Link to="/" className="navbar-brand">
-        <FontAwesomeIcon icon={faMapMarkedAlt} className="size-35" />
-        <div className="text-brand">
-          <span className="text-brand--main">GPS</span>
-          <span className="text-brand--sub">Politico</span>
-        </div>
-      </Link>
+  const [sidebar, setsidebar] = useState(false);
+  const activeSidebar = () => {
+    if (!sidebar) {
+      setsidebar(true);
+      document.getElementById("sidebar").classList.add("active");
+    } else {
+      setsidebar(false);
+      document.getElementById("sidebar").classList.remove("active");
+    }
+  };
 
+  return (
+    <nav className="navbar navbar-expand-lg shadow-lg navbar-dark color-primary-light">
+      <button type="button" className="btn btn-info" onClick={activeSidebar}>
+        <FontAwesomeIcon icon={faBars} className="BarsIcon" />
+      </button>
       <ul className="navbar-nav ml-auto">
         <li className="nav-item dropdown">
-          <Link
-            to="/"
-            className="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <FontAwesomeIcon icon={faUserCircle} className="size-3" />
-          </Link>
+          <FontAwesomeIcon icon={faUser} className="UserIcon" />
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
             <Link to="/" className="dropdown-item" href="#">
               Profile

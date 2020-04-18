@@ -1,4 +1,4 @@
-.CityInfo{
+/*.CityInfo{
     text-align: left;
     &__heading{
         font-weight: 400;
@@ -74,4 +74,74 @@
     font-size: 1.3rem;
     background-color: #bbe9bb ;
     color: #000;
+}*/
+.CityInfo{
+    display: flex;
+    flex-direction: column;
+}
+/*.waiting{
+    min-height: 194.1px;
+}*/
+
+.candidate_info {
+  display: flex;
+  flex-direction: row;
+  &__picture {
+    width: 75px;
+    border-radius: 50px;
+  }
+  &__info {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    align-self: center;
+  }
+}
+
+.scroll_horizontal > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+
+  scrollbar-color: #7f7f7f rgba(0, 0, 0, 0); /* thumb and track color */
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-button {
+    width: .8rem;
+    height: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary-light;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #4fa7da;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: #4fa7da;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-primary;
+    border: 0px none #ffffff;
+    border-radius: 77px;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: $color-primary;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: $color-primary;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+}
+
+.scroll_horizontal > .row > .col-sm-auto {
+  display: inline-block;
+  float: none;
 }

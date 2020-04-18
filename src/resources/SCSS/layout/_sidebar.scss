@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+#sidebar {
+  min-width: 25rem;
+  max-width: 25rem;
+  min-height: 100vh;
+  background-color: $color-primary;
+  padding: 2rem;
+  transition: all .3s;
+  color: $color-white;
+}
+
+#sidebar.active {
+  margin-left: -25rem;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}

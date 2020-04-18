@@ -1,3 +1,5 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
 @import "./abstract/variables";
 @import "./abstract/animations";
 
@@ -5,16 +7,18 @@
 @import "./base/typography";
 @import "./base/utilities";
 
-@import "./components/CityInfo.scss";
-@import "./components/MapContainer.scss";
-@import "./components/Navbar.scss";
-@import "./components/Sidebar.scss";
-@import "./components//Spinner.scss";
-@import "./components/UserProvider.scss";
+@import "./components/cityInfo.scss";
+@import "./components/mapContainer.scss";
+@import "./components/navbar.scss";
+@import "./components/spinner.scss";
+@import "./components/userProvider.scss";
+@import "./components/mainContent";
+
+@import "./layout/navbar";
+@import "./layout/sidebar";
 
 @import "./pages/Dashboard.scss";
 @import "./pages/SignIn.scss";
 @import "./pages/SignUp.scss";
 
 
-@import "../../../node_modules/bootstrap/scss/bootstrap";
