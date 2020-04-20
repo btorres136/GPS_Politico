@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import CityInfo from "./CityInfo";
+import { Collapse } from "react-bootstrap";
 const styles = require("../../resources/JSON/MapStyle.json");
 
 const mapStyles = {
@@ -14,7 +13,16 @@ const mapStyles = {
 const MapContainer = (props) => {
   const [markers, setmarkers] = useState();
   const [state, setstate] = useState("");
+  const [open, setopen] = useState(false);
   const onClick = (info, e) => {
+    document.getElementById("MapContainer").classList.remove("MapContainer");
+    document.getElementById("Map").classList.remove("Map");
+
+    document
+      .getElementById("MapContainer")
+      .classList.add("MapContainer--active");
+    document.getElementById("Map").classList.add("Map--active");
+    setopen(true);
     setstate({
       name: info.municipio,
       lat: info.y_lat,
@@ -47,12 +55,17 @@ const MapContainer = (props) => {
     });
     setmarkers(mark);
   }, [props.cities]);
+
   return (
-    <div className="MapContainer">
-      <div className="pb-4 text-white">
-        <CityInfo municipio={state} />
-      </div>
-      <div className="Map">
+    <div id="MapContainer" className="MapContainer">
+      <Collapse in={open}>
+        <div>
+          <div className="pb-4 text-light">
+            <CityInfo municipio={state} />
+          </div>
+        </div>
+      </Collapse>
+      <div id="Map" className="Map">
         <Map
           containerStyle={mapStyles}
           google={props.google}
@@ -73,8 +86,10 @@ const MapContainer = (props) => {
   );
 };
 const LoadingContainer = (props) => (
-  <div className="SpinnerContainer">
-    <FontAwesomeIcon icon={faSpinner} size="3x" className="spinner" />
+  <div className="load">
+    <div className="spinner-grow text-color-blue spinner-wh" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
   </div>
 );
 export default GoogleApiWrapper({

@@ -1,87 +1,22 @@
-/*.CityInfo{
-    text-align: left;
-    &__heading{
-        font-weight: 400;
-        text-align: center;
-        font-size: 2rem;
-    }
-}
-.CityPosition{
-    font-size: 1.3rem;
-    padding: .8rem;
-    border: 1px solid;
-    color: $color-white;
-    border-color: $color-grey-light-3;
-    display: flex;
-    border-radius: 4px;
-    width: 100%;
-    padding: 1rem;
-    justify-content: space-around;
-    background-color: $color-tertiary;
+.markericon{
+  font-size: 5rem;
 }
 
-.Candidate{
-    text-align: center;
-    border-radius: 10px;
-    &__party{
-        color: $color-fourth;
-        font-weight: 400;
-        font-size: 1.9rem;
-    }
-    &__pic{
-        width: 100px;
-        border-radius: 50px;
-    }
-    &__name{
-        font-size: $default-font-size;
-    }
-    &__info{
-        font-size: 1.2rem;
-        padding:  0 1rem;
-        text-align: justify;
-    }
-    &__partypic{
-        width: 100px;
-        border-radius: 50px;
-    }
-}
-
-.SelectAdvise{
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    &__Icon{
-        color:$color-tertiary;
-    }
-    &__text{
-        text-transform: capitalize;
-        font-size: $default-font-size;
-        font-weight: 400;
-    }
-    @media only screen and (max-width: 1400px) {
-        height: 60vh;
-        min-height: 60vh;
-    }
-}
-
-.btn.editinfo{
-    margin-top: 2rem;
-    text-align: center;
-    width: 100%;
-    font-size: 1.3rem;
-    background-color: #bbe9bb ;
-    color: #000;
-}*/
 .CityInfo{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow: hidden;
 }
-/*.waiting{
-    min-height: 194.1px;
-}*/
+.CityInfo--edit{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  & .btn{
+    font-size: 1.3rem;
+  }
+}
 
 .candidate_info {
   display: flex;
@@ -138,7 +73,6 @@
   &::-webkit-scrollbar-corner {
     background: transparent;
   }
-
 }
 
 .scroll_horizontal > .row > .col-sm-auto {

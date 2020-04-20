@@ -1,4 +1,4 @@
-.MapContainer{
+.MapContainer--active{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -6,9 +6,28 @@
     min-height: calc(100vh - 40.2px);
     transition: all .3s;
 }
+////////////////////////////////////////////
+.MapContainer{
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+    transition: all .3s;
+}
+
+.collapse{
+    transition: all .3s;
+}
+
 //283
 //680.5
 .Map{
+    min-height: calc(100vh - 80px);
+    transition: all .3s;
+}
+////////////////////////////////
+.Map--active{
     min-height: calc(100vh - 293px);
     transition: all .3s;
 }

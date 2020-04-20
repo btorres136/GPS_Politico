@@ -6,9 +6,6 @@ import SignUp from "./components/auth/SignUp";
 import main from "./components/main/main";
 import PrivateRoute from "./config/PrivateRoute";
 import UserProvider from "./components/providers/UserProvider";
-import "popper.js";
-import "jquery";
-import "bootstrap";
 import "./resources/SCSS/main.scss";
 
 function App() {
