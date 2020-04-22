@@ -25,6 +25,7 @@ export const Candidates = () => {
     });
   }, []);
   return (
+    
     <div>
       {retrived ? (
         <ACandidate candidates={candidates} />
