@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import CityInfo from "./CityInfo";
 import { Collapse } from "react-bootstrap";
+import { CityContext } from "../providers/CityProviders";
 const styles = require("../../resources/JSON/MapStyle.json");
 
 const mapStyles = {
@@ -12,24 +13,27 @@ const mapStyles = {
 };
 const MapContainer = (props) => {
   const [markers, setmarkers] = useState();
-  const [state, setstate] = useState("");
   const [open, setopen] = useState(false);
-  const onClick = (info, e) => {
-    document.getElementById("MapContainer").classList.remove("MapContainer");
-    document.getElementById("Map").classList.remove("Map");
+  //const [state, setstate] = useState({});
+  const { setmunicipio } = useContext(CityContext);
 
-    document
-      .getElementById("MapContainer")
-      .classList.add("MapContainer--active");
-    document.getElementById("Map").classList.add("Map--active");
-    setopen(true);
-    setstate({
-      name: info.municipio,
-      lat: info.y_lat,
-      lng: info.x_lat,
-    });
-  };
   useEffect(() => {
+    const onClick = (info, e) => {
+      document.getElementById("MapContainer").classList.remove("MapContainer");
+      document.getElementById("Map").classList.remove("Map");
+
+      document
+        .getElementById("MapContainer")
+        .classList.add("MapContainer--active");
+      document.getElementById("Map").classList.add("Map--active");
+      setopen(true);
+      setmunicipio({
+        name: info.municipio,
+        lat: info.y_lat,
+        lng: info.x_lat,
+      });
+    };
+
     let mark = [];
     props.cities.map((data, idx) => {
       mark.push(
@@ -54,14 +58,14 @@ const MapContainer = (props) => {
       return null;
     });
     setmarkers(mark);
-  }, [props.cities]);
+  }, [props.cities, setmunicipio]);
 
   return (
     <div id="MapContainer" className="MapContainer">
       <Collapse in={open}>
         <div>
           <div className="pb-4 text-light">
-            <CityInfo municipio={state} />
+            <CityInfo />
           </div>
         </div>
       </Collapse>

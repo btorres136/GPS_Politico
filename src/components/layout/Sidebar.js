@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -6,10 +7,14 @@ const Sidebar = () => {
       <div class="sidebar-header">
         <h3>Bootstrap Sidebar</h3>
       </div>
-
       <ul class="list-unstyled">
         <p>Dummy Heading</p>
-        <li></li>
+        <li>
+          <Link to="/Dashboard/Home">Home</Link>
+        </li>
+        <li>
+          <Link to="/Dashboard/Home">Representantes</Link>
+        </li>
       </ul>
     </nav>
   );
