@@ -3,13 +3,13 @@ import { db } from "../utils/firebase-functions";
 import MapContainer from "./MapContainer";
 const Cities = () => {
   const [cities, setcities] = useState([]);
-  const [retrived, setretrieved] = useState(false);
+  const [retrived, setretrived] = useState(false);
 
   useEffect(() => {
     db.ref("/Pueblos").on(("value" || "child_changed"), (snapshot) => {
       const data = snapshot.val();
       const newval = [];
-      for (let value in data) {
+      for (let value in data) { 
         newval.push({
           municipio: data[value].municipio,
           x_lat: data[value].x_long,
@@ -17,7 +17,7 @@ const Cities = () => {
         });
       }
       setcities(newval);
-      setretrieved(true);
+      setretrived(true);
     });
   }, []);
   return (

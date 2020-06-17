@@ -7,11 +7,12 @@
 @import "./base/typography";
 @import "./base/utilities";
 
-@import "./components/cityInfo.scss";
+@import "./components/changecity";
+@import "./components/cityInfo";
 @import "./components/loading";
-@import "./components/mapContainer.scss";
-@import "./components/navbar.scss";
-@import "./components/userProvider.scss";
+@import "./components/mapContainer";
+@import "./components/navbar";
+@import "./components/userProvider";
 @import "./components/mainContent";
 
 @import "./layout/navbar";

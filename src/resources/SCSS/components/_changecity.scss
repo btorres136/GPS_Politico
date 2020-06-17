@@ -1,0 +1,7 @@
+.changecity {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+  transition: all 0.3s;
+}

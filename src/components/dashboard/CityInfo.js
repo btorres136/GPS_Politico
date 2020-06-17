@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-//import { db } from "../utils/firebase-functions";
 import Image from "react-shimmer";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { Link } from "react-router-dom";
