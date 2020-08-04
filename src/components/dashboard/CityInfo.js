@@ -27,7 +27,7 @@ const CityInfo = (props) => {
           <div className="scroll_horizontal">
             <div className="row">
               <div className="col-sm pb-3">
-                <div className="card color-primary-light">
+                <div className="card color-primary">
                   <div className="card-body text-light pr-5 pl-5">
                     <h5 className="card-title mb-3 text-center">
                       <Skeleton width={200} />
@@ -80,7 +80,7 @@ const CityInfo = (props) => {
     for (let value in cities) {
       info.push(
         <div key={value} className="col-sm-auto pb-3">
-          <div className="card color-primary-light">
+          <div className="card color-primary">
             <div className="card-body text-light pr-5 pl-5">
               <h5 className="card-title mb-3 text-center">
                 {cities[value].Partido.value}

@@ -38,6 +38,7 @@ const MapContainer = (props) => {
     props.cities.map((data, idx) => {
       mark.push(
         <Marker
+          label={{text:data.municipio, color:"#666666", fontSize: "16"}}
           key={idx}
           onClick={onClick.bind(this, data)}
           position={{ lat: data.y_lat, lng: data.x_lat }}
@@ -48,7 +49,7 @@ const MapContainer = (props) => {
             path:
               "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
             scale: 0.7,
-            fillColor: "#edae49",
+            fillColor: "rgba(11, 57, 84,0.8)",
             fillOpacity: 0.9,
             strokeWeight: 0.3,
             rotation: 0,

@@ -20,6 +20,7 @@ const Cities = () => {
       setretrived(true);
     });
   }, []);
+  console.log(cities);
   return (
     <>
       {retrived ? (

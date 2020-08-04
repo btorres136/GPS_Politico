@@ -33,7 +33,23 @@ const ChangeCityInfo = () => {
           Change City Info
         </button>
         <Collapse in={edit}>
-            <p>Change City Info</p>
+          <div>
+            <div className="form-group row">
+              <label for="name">Name: </label>
+              <input id="name" className="form-control" type="text" />
+              <button>Change Name</button>
+            </div>
+            <div className="form-group row">
+              <label for="latitud">Latitud: </label>
+              <input id="latitud" className="form-control" type="text" />
+              <button>Change Latitud</button>
+            </div>
+            <div className="form-group row">
+              <label for="longitud">Longitud: </label>
+              <input id="longitud" className="form-control" type="text" />
+              <button>Change Longitud</button>
+            </div>
+          </div>
         </Collapse>
       </div>
       {info}

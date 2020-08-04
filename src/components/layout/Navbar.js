@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg shadow-lg navbar-dark color-primary-light">
+    <nav className="navbar navbar-expand-lg shadow-lg navbar-dark color-primary">
       <button type="button" className="btn btn-info" onClick={activeSidebar}>
         <FontAwesomeIcon icon={faBars} className="BarsIcon" />
       </button>
