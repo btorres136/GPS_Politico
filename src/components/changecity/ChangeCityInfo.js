@@ -10,7 +10,7 @@ const ChangeCityInfo = () => {
   const [edit, setedit] = useState(false);
   //const [data, setdata] = useState(null);
 
-    //db.ref("/Candidatos/Municipio de " + municipio.name + "/Alcalde").update();
+  //db.ref("/Candidatos/Municipio de " + municipio.name + "/Alcalde").update();
 
   if (!municipio) {
     return <Redirect to="/Dashboard/Home" />;
@@ -19,7 +19,10 @@ const ChangeCityInfo = () => {
   for (let value in cities) {
     info.push(
       <div key={value}>
-        <ChangeData cities={cities[value]} value={cities[value].Partido.value} />
+        <ChangeData
+          cities={cities[value]}
+          value={cities[value].Partido.value}
+        />
       </div>
     );
   }
@@ -29,9 +32,13 @@ const ChangeCityInfo = () => {
         <h2>Municipio de {municipio.name}</h2>
         <p>Latitud: {municipio.lat}</p>
         <p>Longitud: {municipio.lng}</p>
-        <button className="btn btn-info" onClick={() => edit ? setedit(false) : setedit(true)}>
+        <button
+          className="btn btn-info"
+          onClick={() => (edit ? setedit(false) : setedit(true))}
+        >
           Change City Info
         </button>
+
         <Collapse in={edit}>
           <div>
             <div className="form-group row">
@@ -52,7 +59,11 @@ const ChangeCityInfo = () => {
           </div>
         </Collapse>
       </div>
+
       {info}
+      <div className="form-group row">
+        <button className="btn btn btn-info">Añadir nuevo candidato</button>
+      </div>
     </div>
   );
 };

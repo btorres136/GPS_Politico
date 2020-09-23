@@ -105,6 +105,7 @@ const CityInfo = (props) => {
       );
     }
   }
+  //color a negro
   return (
     <div className="CityInfo">
       <div className="CityInfo--edit">

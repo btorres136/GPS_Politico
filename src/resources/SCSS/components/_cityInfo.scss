@@ -1,23 +1,26 @@
-.markericon{
+.markericon {
   font-size: 5rem;
 }
 
-.CityInfo{
+.CityInfo {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   overflow: hidden;
 }
-.CityInfo--edit{
+.CityInfo--edit {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  & .btn{
+  & .btn {
     font-size: 1.3rem;
   }
 }
 
+.CityInfo__heading {
+  color: black;
+}
 .candidate_info {
   display: flex;
   flex-direction: row;
@@ -45,7 +48,7 @@
     height: 5px;
   }
   &::-webkit-scrollbar-button {
-    width: .8rem;
+    width: 0.8rem;
     height: 20px;
   }
   &::-webkit-scrollbar-thumb {
